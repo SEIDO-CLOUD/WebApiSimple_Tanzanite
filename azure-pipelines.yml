@@ -8,9 +8,9 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-  #name: 'MartinsXPS15'
-  #demands:
-  #    - agent.name -equals MARTINS_XPS15
+  # name: 'MartinsXPS15'
+  # demands:
+  #     - agent.name -equals MARTINS_XPS15
 
 variables:
   solution: '**/*.sln'
@@ -54,7 +54,7 @@ stages:
               azureSubscription: 'Tanzanite'
               appType: 'webApp'
               WebAppName: 'seido-webservice-D1AEB3787ACF'
-#              WebAppName: 'SYS6-Tanzanite-ws-devops'
+              # WebAppName: 'SYS6-Tanzanite-ws-devops'
               packageForLinux: '$(Build.ArtifactStagingDirectory)\*.zip'
               appSettings:  
                 -MY_ENV_VAR1 "SeidoAB"
