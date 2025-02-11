@@ -41,10 +41,6 @@ stages:
               ArtifactName: 'drop'
               publishLocation: 'Container'
 
-  - stage: Publish
-    jobs:
-      - job: publishjob
-        steps:
           - task: DownloadBuildArtifacts@1
             inputs:
               buildType: 'current'
