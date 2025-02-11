@@ -41,6 +41,10 @@ stages:
               ArtifactName: 'drop'
               publishLocation: 'Container'
 
+  - stage: Publish
+    jobs:
+      - job: publishjob
+        steps:
           - task: DownloadBuildArtifacts@1
             inputs:
               buildType: 'current'
@@ -53,8 +57,8 @@ stages:
               ConnectionType: 'AzureRM'
               azureSubscription: 'Tanzanite'
               appType: 'webApp'
-              WebAppName: 'seido-webservice-D1AEB3787ACF'
-              # WebAppName: 'SYS6-Tanzanite-ws-devops'
+              #WebAppName: 'seido-webservice-D1AEB3787ACF'
+              WebAppName: 'SYS6-Tanzanite-ws-devops'
               packageForLinux: '$(Build.ArtifactStagingDirectory)\*.zip'
               appSettings:  
                 -MY_ENV_VAR1 "SeidoAB"
